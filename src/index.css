@@ -1,0 +1,56 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  html.dark input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]),
+  html.dark textarea,
+  html.dark select {
+    background-color: #0f172a;
+    color: #f1f5f9;
+    border-color: #334155;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Dark surface adaptations for nested utility tool cards while preserving CTA button text contrast */
+html.dark .tool-workspace .bg-white {
+  background-color: #1e293b;
+}
+
+html.dark .tool-workspace .bg-slate-50,
+html.dark .tool-workspace .bg-slate-100 {
+  background-color: #0f172a;
+}
+
+html.dark .tool-workspace .text-slate-900,
+html.dark .tool-workspace .text-slate-800 {
+  color: #f1f5f9;
+}
+
+html.dark .tool-workspace .text-slate-700,
+html.dark .tool-workspace .text-slate-600,
+html.dark .tool-workspace .text-slate-500 {
+  color: #94a3b8;
+}
+
+html.dark .tool-workspace .border-slate-200,
+html.dark .tool-workspace .border-slate-300 {
+  border-color: #334155;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "My Toolset",
+  "description": "Fast, Private, Works Offline - 50+ Tools in One Place for Image, PDF, Text, QR, Daily, and Calculator tasks.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
